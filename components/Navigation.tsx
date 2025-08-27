@@ -14,7 +14,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function Navigation() {
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
   const { data: session, status } = useSession();
 
   return (

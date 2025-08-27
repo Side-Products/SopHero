@@ -117,8 +117,6 @@ Please create a compelling SOP that will help this applicant stand out in their 
 }
 
 function generateFallbackSOP(data: FormData): string {
-  const currentYear = new Date().getFullYear();
-  
   // Generate personalized introduction
   const introduction = generateIntroduction(data);
   
