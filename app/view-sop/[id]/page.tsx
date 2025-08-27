@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter, useParams } from "next/navigation";
 import Link from "next/link";
@@ -41,18 +41,7 @@ export default function ViewSOP() {
   const [isRegenerating, setIsRegenerating] = useState(false);
   const [editedSOP, setEditedSOP] = useState("");
 
-  useEffect(() => {
-    if (status === "unauthenticated") {
-      router.push("/auth/signin");
-      return;
-    }
-
-    if (status === "authenticated" && params.id) {
-      fetchSOP();
-    }
-  }, [status, params.id, router]);
-
-  const fetchSOP = async () => {
+  const fetchSOP = useCallback(async () => {
     try {
       const response = await fetch(`/api/sop/${params.id}`);
       if (response.ok) {
@@ -69,7 +58,18 @@ export default function ViewSOP() {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [params.id, router]);
+
+  useEffect(() => {
+    if (status === "unauthenticated") {
+      router.push("/auth/signin");
+      return;
+    }
+
+    if (status === "authenticated" && params.id) {
+      fetchSOP();
+    }
+  }, [status, params.id, router, fetchSOP]);
 
   const handleDownload = () => {
     if (!sop) return;
