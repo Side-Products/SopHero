@@ -207,8 +207,8 @@ export default function Questionnaire() {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="High School">High School</SelectItem>
-              <SelectItem value="Bachelor's Degree">Bachelor's Degree</SelectItem>
-              <SelectItem value="Master's Degree">Master's Degree</SelectItem>
+              <SelectItem value="Bachelor&apos;s Degree">Bachelor&apos;s Degree</SelectItem>
+              <SelectItem value="Master&apos;s Degree">Master&apos;s Degree</SelectItem>
               <SelectItem value="PhD">PhD</SelectItem>
               <SelectItem value="Other">Other</SelectItem>
             </SelectContent>
@@ -230,7 +230,7 @@ export default function Questionnaire() {
           id="workExperience"
           value={formData.workExperience}
           onChange={(e) => handleInputChange("workExperience", e.target.value)}
-          placeholder="Share your work experience, internships, or any professional background. Don't worry about perfect formatting - just describe what you've done and what you learned."
+          placeholder="Share your work experience, internships, or any professional background. Don&apos;t worry about perfect formatting - just describe what you&apos;ve done and what you learned."
           rows={4}
         />
       </div>
@@ -240,7 +240,7 @@ export default function Questionnaire() {
           id="researchExperience"
           value={formData.researchExperience}
           onChange={(e) => handleInputChange("researchExperience", e.target.value)}
-          placeholder="Describe any research projects, publications, or academic research you've been involved in. Include rough ideas about what you worked on and what you discovered."
+          placeholder="Describe any research projects, publications, or academic research you&apos;ve been involved in. Include rough ideas about what you worked on and what you discovered."
           rows={4}
         />
       </div>
@@ -255,7 +255,7 @@ export default function Questionnaire() {
           id="extracurricularActivities"
           value={formData.extracurricularActivities}
           onChange={(e) => handleInputChange("extracurricularActivities", e.target.value)}
-          placeholder="Tell us about clubs, organizations, volunteer work, or other activities you're involved in. Just list your main activities and what you do in them."
+          placeholder="Tell us about clubs, organizations, volunteer work, or other activities you&apos;re involved in. Just list your main activities and what you do in them."
           rows={4}
         />
       </div>
@@ -265,7 +265,7 @@ export default function Questionnaire() {
           id="achievements"
           value={formData.achievements}
           onChange={(e) => handleInputChange("achievements", e.target.value)}
-          placeholder="List any awards, honors, scholarships, or notable achievements. Don't worry about perfect formatting - just mention what you've accomplished."
+          placeholder="List any awards, honors, scholarships, or notable achievements. Don&apos;t worry about perfect formatting - just mention what you&apos;ve accomplished."
           rows={4}
         />
       </div>
@@ -377,7 +377,7 @@ export default function Questionnaire() {
             {/* Helpful Note */}
             <div className="mb-6 p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg border border-blue-200 dark:border-blue-800">
               <p className="text-sm text-blue-800 dark:text-blue-200">
-                💡 <strong>Tip:</strong> Don't worry about perfect formatting or writing! Just share your ideas, experiences, and thoughts. SopHero will help you create a well-structured SOP from your rough notes.
+                💡 <strong>Tip:</strong> Don&apos;t worry about perfect formatting or writing! Just share your ideas, experiences, and thoughts. SopHero will help you create a well-structured SOP from your rough notes.
               </p>
             </div>
 

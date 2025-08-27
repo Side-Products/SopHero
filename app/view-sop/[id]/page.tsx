@@ -33,7 +33,7 @@ interface SOP {
 }
 
 export default function ViewSOP() {
-  const { data: session, status } = useSession();
+  const { status } = useSession();
   const router = useRouter();
   const params = useParams();
   const [sop, setSop] = useState<SOP | null>(null);
